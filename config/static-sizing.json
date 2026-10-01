@@ -1,0 +1,13 @@
+{
+  "status": "illustrative only; not a motor selection or rating",
+  "gravity_m_s2": 9.81,
+  "upper_length_m": 0.28,
+  "forearm_length_m": 0.24,
+  "upper_link_mass_kg": 0.7,
+  "forearm_link_mass_kg": 0.5,
+  "elbow_module_mass_kg": 0.6,
+  "wrist_modules_mass_kg": 0.7,
+  "distal_load_mass_kg": 1.0,
+  "distal_load_com_beyond_wrist_m": 0.08,
+  "reserve_multiplier": 1.5
+}

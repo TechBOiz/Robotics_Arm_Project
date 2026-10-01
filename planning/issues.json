@@ -1,0 +1,370 @@
+[
+  {
+    "id": "ISS-001",
+    "title": "Confirm Atlas reference and V1 scope",
+    "milestone": "M0",
+    "labels": [
+      "decision",
+      "documentation"
+    ],
+    "depends_on": [],
+    "status": "draft",
+    "acceptance": [
+      "Record reference URLs/video timestamps and desired features.",
+      "Confirm custom modules versus integrated-actuator build and deferred end effector."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-002",
+    "title": "Set reach, distal load, speed, duty and budget",
+    "milestone": "M0",
+    "labels": [
+      "decision"
+    ],
+    "depends_on": [
+      "ISS-001"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Define load including tool, sensor and adapter mass plus COM offset.",
+      "Set first-joint/full-arm budget ceilings and fabrication access.",
+      "Resolve TBD performance targets or explicitly defer them."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-003",
+    "title": "Compare 6R and 7R kinematic layouts",
+    "milestone": "M1",
+    "labels": [
+      "mechanical",
+      "simulation"
+    ],
+    "depends_on": [
+      "ISS-002"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Create axes/offset diagrams and compare workspace, singularities and collisions.",
+      "Record selected topology in decision register."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-004",
+    "title": "Build mass, static and dynamic load budget",
+    "milestone": "M1",
+    "labels": [
+      "mechanical",
+      "controls"
+    ],
+    "depends_on": [
+      "ISS-003"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Include downstream actuator masses, moments and task accelerations.",
+      "Separate static, peak, RMS and thermal conditions.",
+      "Review bearing moments and base reactions."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-005",
+    "title": "Shortlist actuators and transmissions",
+    "milestone": "M1",
+    "labels": [
+      "procurement",
+      "mechanical"
+    ],
+    "depends_on": [
+      "ISS-004"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Compare at least two feasible actuator approaches using official datasheets.",
+      "Document output torque/speed, inertia, thermal, protocol, bearing and availability limits.",
+      "Update masses and costs without double-counting integrated parts."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-006",
+    "title": "Resolve continuous rotation and harness approach",
+    "milestone": "M1",
+    "labels": [
+      "mechanical",
+      "electrical",
+      "decision"
+    ],
+    "depends_on": [
+      "ISS-003",
+      "ISS-005"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Identify candidate continuous axes and bounded V1 ranges.",
+      "Document power/data routing, turn tracking, serviceability and endurance test."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-007",
+    "title": "Define power, stop and gravity-load retention",
+    "milestone": "M1",
+    "labels": [
+      "electrical",
+      "validation"
+    ],
+    "depends_on": [
+      "ISS-005"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Document power budget, protection, regeneration handling and stop sequence.",
+      "Define supported power-loss test and manual rearm."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-008",
+    "title": "Freeze first-joint mechanical and electrical interfaces",
+    "milestone": "M1",
+    "labels": [
+      "mechanical",
+      "electrical"
+    ],
+    "depends_on": [
+      "ISS-006",
+      "ISS-007"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Publish reviewed drawings/pinouts and fixture plan.",
+      "Record exact first-joint BOM, quote dates and budget review."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-009",
+    "title": "Define joint protocol and timing budget",
+    "milestone": "M1",
+    "labels": [
+      "firmware",
+      "controls"
+    ],
+    "depends_on": [
+      "ISS-005"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Select compatible transport; calculate worst-case bus traffic and timing.",
+      "Define modes, units, limits, sensor validity, timestamps, timeout and fault behavior."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-010",
+    "title": "Build restrained single-joint fixture",
+    "milestone": "M2",
+    "labels": [
+      "mechanical",
+      "electrical"
+    ],
+    "depends_on": [
+      "ISS-008"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Document assembly, calibrated reference sensor, wiring and load support.",
+      "Complete unpowered checks before energization."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-011",
+    "title": "Bring up joint drive and fault handling",
+    "milestone": "M2",
+    "labels": [
+      "firmware",
+      "controls",
+      "validation"
+    ],
+    "depends_on": [
+      "ISS-009",
+      "ISS-010"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Verify disarmed startup, encoder direction, bounded commands and explicit enable.",
+      "Record supported stop, communication loss, encoder fault and manual recovery tests."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-012",
+    "title": "Characterize first-joint torque and thermals",
+    "milestone": "M2",
+    "labels": [
+      "validation",
+      "controls"
+    ],
+    "depends_on": [
+      "ISS-011"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Measure torque/current relation, hysteresis, backlash and temperature rise.",
+      "Define supported continuous and peak envelopes; revise BOM/design if needed."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-013",
+    "title": "Build and validate two-link section",
+    "milestone": "M3",
+    "labels": [
+      "mechanical",
+      "controls"
+    ],
+    "depends_on": [
+      "ISS-012"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Update loads with actual part masses before replication.",
+      "Compare measured gravity torques with model and validate harness and load retention."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-014",
+    "title": "Assemble full arm through flange",
+    "milestone": "M4",
+    "labels": [
+      "mechanical",
+      "electrical"
+    ],
+    "depends_on": [
+      "ISS-013"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Release remaining joints after updated load review.",
+      "Record as-built mass, revision, wiring and calibration IDs."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-015",
+    "title": "Calibrate and verify full-arm motion",
+    "milestone": "M4",
+    "labels": [
+      "controls",
+      "validation"
+    ],
+    "depends_on": [
+      "ISS-014"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Measure zero offsets, repeatability and model error separately.",
+      "Validate limits, self-collision constraints, stop and thermal duty with inert loads."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-016",
+    "title": "Build synchronized sensing and logging pipeline",
+    "milestone": "M5",
+    "labels": [
+      "controls",
+      "research"
+    ],
+    "depends_on": [
+      "ISS-015"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Record raw sensors, estimates, command/state, timestamps, image age and configurations.",
+      "Quantify sensor calibration, delay and fault/missing-data behavior."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-017",
+    "title": "Build simulation with sensor and actuator limitations",
+    "milestone": "M5",
+    "labels": [
+      "simulation",
+      "controls"
+    ],
+    "depends_on": [
+      "ISS-004",
+      "ISS-009"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Validate single-joint and two-link analytic gravity cases.",
+      "Expose only deployable observations to the policy; isolate privileged state.",
+      "Document friction, latency, saturation and model discrepancies."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-018",
+    "title": "Implement intermittent-vision experiment baselines",
+    "milestone": "M6",
+    "labels": [
+      "simulation",
+      "research"
+    ],
+    "depends_on": [
+      "ISS-017"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Compare frequent, fixed-interval, initial-only and event-triggered vision.",
+      "Include force-feedback and memory ablations plus total-compute measurements."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-019",
+    "title": "Plan physical research replication and future tool interface",
+    "milestone": "M6",
+    "labels": [
+      "research",
+      "decision"
+    ],
+    "depends_on": [
+      "ISS-016",
+      "ISS-018"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Select a simple contact task and separately approve any probe/tool design.",
+      "Define calibrated sensing, matched baselines and uncertainty/failure reporting."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  },
+  {
+    "id": "ISS-020",
+    "title": "Choose repository visibility and licensing",
+    "milestone": "M0",
+    "labels": [
+      "decision",
+      "documentation"
+    ],
+    "depends_on": [
+      "ISS-001"
+    ],
+    "status": "draft",
+    "acceptance": [
+      "Record publication choice and separate code/CAD/electrical licensing decision.",
+      "Create repository and import milestone/issue drafts without duplicating them."
+    ],
+    "body": "Complete the scope in the acceptance criteria; link relevant requirement, decision and BOM IDs."
+  }
+]

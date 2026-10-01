@@ -1,0 +1,52 @@
+[
+  {
+    "name": "mechanical",
+    "color": "0366d6",
+    "description": "Mechanical workstream"
+  },
+  {
+    "name": "electrical",
+    "color": "d4c5f9",
+    "description": "Electrical workstream"
+  },
+  {
+    "name": "controls",
+    "color": "0052cc",
+    "description": "Controls workstream"
+  },
+  {
+    "name": "firmware",
+    "color": "5319e7",
+    "description": "Firmware workstream"
+  },
+  {
+    "name": "simulation",
+    "color": "1d76db",
+    "description": "Simulation workstream"
+  },
+  {
+    "name": "research",
+    "color": "0e8a16",
+    "description": "Research workstream"
+  },
+  {
+    "name": "documentation",
+    "color": "0075ca",
+    "description": "Documentation workstream"
+  },
+  {
+    "name": "procurement",
+    "color": "fbca04",
+    "description": "Procurement workstream"
+  },
+  {
+    "name": "decision",
+    "color": "d93f0b",
+    "description": "Decision workstream"
+  },
+  {
+    "name": "validation",
+    "color": "b60205",
+    "description": "Validation workstream"
+  }
+]

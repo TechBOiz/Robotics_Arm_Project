@@ -1,0 +1,51 @@
+[
+  {
+    "id": "M0",
+    "title": "Requirements",
+    "description": "Approve scope, reference, load, reach and budget",
+    "state": "draft",
+    "due_date": null
+  },
+  {
+    "id": "M1",
+    "title": "Architecture and sizing",
+    "description": "Document loads, shortlisted actuators and interfaces",
+    "state": "draft",
+    "due_date": null
+  },
+  {
+    "id": "M2",
+    "title": "Single joint",
+    "description": "Characterize a restrained instrumented joint",
+    "state": "draft",
+    "due_date": null
+  },
+  {
+    "id": "M3",
+    "title": "Two-link section",
+    "description": "Validate gravity model and harness behavior",
+    "state": "draft",
+    "due_date": null
+  },
+  {
+    "id": "M4",
+    "title": "Full arm",
+    "description": "Calibrate and validate full arm through flange",
+    "state": "draft",
+    "due_date": null
+  },
+  {
+    "id": "M5",
+    "title": "Sensing platform",
+    "description": "Quantify sensor quality and synchronize observations",
+    "state": "draft",
+    "due_date": null
+  },
+  {
+    "id": "M6",
+    "title": "Intermittent-vision research",
+    "description": "Compare policies and image schedules reproducibly",
+    "state": "draft",
+    "due_date": null
+  }
+]
